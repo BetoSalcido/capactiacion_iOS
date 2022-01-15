@@ -12,7 +12,6 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tabBar.isTranslucent = false
         self.delegate = self
 
@@ -26,7 +25,7 @@ private extension TabBarController {
     func setUpViewController() {
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
-        
+        // Es una variable del TabBarController
         viewControllers = [
             createTabController(for: homeViewController, title: "Inicio", selected: UIImage(named: "icon_ic_kelder")!),
         ]

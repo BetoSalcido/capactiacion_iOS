@@ -14,6 +14,16 @@
 		69BB7FC9279331A20078A52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FC7279331A20078A52D /* LaunchScreen.storyboard */; };
 		69BB7FD12793325D0078A52D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD02793325D0078A52D /* TabBarController.swift */; };
 		69BB7FD3279332AF0078A52D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FD2279332AF0078A52D /* Home.storyboard */; };
+		69BB7FD527933C070078A52D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD427933C070078A52D /* LoginViewController.swift */; };
+		69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD627933D4B0078A52D /* UIViewController+App.swift */; };
+		69BB7FDB27933F0C0078A52D /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDA27933F0C0078A52D /* Example.swift */; };
+		69BB7FDD27933FA10078A52D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */; };
+		69BB7FE0279345D70078A52D /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDE279345D70078A52D /* AjustesViewController.swift */; };
+		69BB7FE1279345D70078A52D /* AjustesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FDF279345D70078A52D /* AjustesViewController.xib */; };
+		69BB7FE427934F660078A52D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE327934F660078A52D /* SplashViewController.swift */; };
+		69BB7FE62793591A0078A52D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE52793591A0078A52D /* TableViewController.swift */; };
+		69BB7FE927935CCE0078A52D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE827935CCE0078A52D /* MainCell.swift */; };
+		69BB7FEB279369570078A52D /* UIImage+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FEA279369570078A52D /* UIImage+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		69BB7FCA279331A20078A52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BB7FD02793325D0078A52D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		69BB7FD2279332AF0078A52D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		69BB7FD427933C070078A52D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		69BB7FD627933D4B0078A52D /* UIViewController+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
+		69BB7FDA27933F0C0078A52D /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		69BB7FDE279345D70078A52D /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		69BB7FDF279345D70078A52D /* AjustesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AjustesViewController.xib; sourceTree = "<group>"; };
+		69BB7FE327934F660078A52D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		69BB7FE52793591A0078A52D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		69BB7FE827935CCE0078A52D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		69BB7FEA279369570078A52D /* UIImage+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,8 @@
 		69BB7FBB279331A10078A52D /* capacitacion_2 */ = {
 			isa = PBXGroup;
 			children = (
+				69BB7FE727935C9A0078A52D /* TableViewCells */,
+				69BB7FD827933D500078A52D /* Extension */,
 				69BB7FBC279331A10078A52D /* AppDelegate.swift */,
 				69BB7FBE279331A10078A52D /* SceneDelegate.swift */,
 				69BB7FC0279331A10078A52D /* HomeViewController.swift */,
@@ -66,8 +88,32 @@
 				69BB7FC7279331A20078A52D /* LaunchScreen.storyboard */,
 				69BB7FCA279331A20078A52D /* Info.plist */,
 				69BB7FD02793325D0078A52D /* TabBarController.swift */,
+				69BB7FD427933C070078A52D /* LoginViewController.swift */,
+				69BB7FDA27933F0C0078A52D /* Example.swift */,
+				69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */,
+				69BB7FDE279345D70078A52D /* AjustesViewController.swift */,
+				69BB7FDF279345D70078A52D /* AjustesViewController.xib */,
+				69BB7FE327934F660078A52D /* SplashViewController.swift */,
+				69BB7FE52793591A0078A52D /* TableViewController.swift */,
 			);
 			path = capacitacion_2;
+			sourceTree = "<group>";
+		};
+		69BB7FD827933D500078A52D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				69BB7FD627933D4B0078A52D /* UIViewController+App.swift */,
+				69BB7FEA279369570078A52D /* UIImage+App.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		69BB7FE727935C9A0078A52D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				69BB7FE827935CCE0078A52D /* MainCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BB7FE1279345D70078A52D /* AjustesViewController.xib in Resources */,
 				69BB7FD3279332AF0078A52D /* Home.storyboard in Resources */,
 				69BB7FC9279331A20078A52D /* LaunchScreen.storyboard in Resources */,
 				69BB7FC6279331A20078A52D /* Assets.xcassets in Resources */,
@@ -141,9 +188,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BB7FC1279331A10078A52D /* HomeViewController.swift in Sources */,
+				69BB7FE0279345D70078A52D /* AjustesViewController.swift in Sources */,
+				69BB7FE927935CCE0078A52D /* MainCell.swift in Sources */,
+				69BB7FEB279369570078A52D /* UIImage+App.swift in Sources */,
+				69BB7FDB27933F0C0078A52D /* Example.swift in Sources */,
 				69BB7FD12793325D0078A52D /* TabBarController.swift in Sources */,
+				69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */,
 				69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */,
+				69BB7FE62793591A0078A52D /* TableViewController.swift in Sources */,
+				69BB7FD527933C070078A52D /* LoginViewController.swift in Sources */,
+				69BB7FDD27933FA10078A52D /* CategoriesViewController.swift in Sources */,
 				69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */,
+				69BB7FE427934F660078A52D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

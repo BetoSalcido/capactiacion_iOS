@@ -19,14 +19,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            tabBarController.selectedIndex = 0
-            window.rootViewController = tabBarController
-            self.window = window
-            self.window?.makeKeyAndVisible()
+        let isUserLogged = UserDefaults.standard.bool(forKey: "isUserLogged")
+        
+        if !isUserLogged {
+            if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                // Descomentar si quieren ver las otras pantallas
+                tabBarController.selectedIndex = 0
+                window.rootViewController = tabBarController
+                
+                // Descomentar si quieren agregar el splash viewController
+//                guard let splashViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController else {
+//                    return
+//                }
+//                window.rootViewController = splashViewController
+                
+                self.window = window
+                self.window?.makeKeyAndVisible()
+            }
+            
+        } else {
+            if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                window.rootViewController = LoginViewController()
+                self.window = window
+                self.window?.makeKeyAndVisible()
+            }
         }
 
+    }
+    
+    func switchViewController() {
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
