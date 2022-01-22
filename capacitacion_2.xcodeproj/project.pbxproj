@@ -16,6 +16,7 @@
 		694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */; };
 		694B546B279C9D1B00CF5ABF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */; };
 		694B546D279C9D4400CF5ABF /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694B546C279C9D4400CF5ABF /* CollectionView.storyboard */; };
+		694B5470279C9EC600CF5ABF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B546F279C9EC600CF5ABF /* CollectionViewCell.swift */; };
 		69556410279C6A77004455F6 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6955640F279C6A77004455F6 /* AnimalViewController.swift */; };
 		69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBC279331A10078A52D /* AppDelegate.swift */; };
 		69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBE279331A10078A52D /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 		694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+App.swift"; sourceTree = "<group>"; };
 		694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		694B546C279C9D4400CF5ABF /* CollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionView.storyboard; sourceTree = "<group>"; };
+		694B546F279C9EC600CF5ABF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6955640F279C6A77004455F6 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		69BB7FB9279331A10078A52D /* capacitacion_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capacitacion_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB7FBC279331A10078A52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +88,19 @@
 		694B5469279C9D0200CF5ABF /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				694B546E279C9EB200CF5ABF /* Cell */,
 				694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */,
 				694B546C279C9D4400CF5ABF /* CollectionView.storyboard */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		694B546E279C9EB200CF5ABF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				694B546F279C9EC600CF5ABF /* CollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		69BB7FB0279331A10078A52D = {
@@ -280,6 +291,7 @@
 				69BB7FD12793325D0078A52D /* TabBarController.swift in Sources */,
 				694B5465279C90BB00CF5ABF /* ShoppingCartModel.swift in Sources */,
 				69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */,
+				694B5470279C9EC600CF5ABF /* CollectionViewCell.swift in Sources */,
 				69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */,
 				69556410279C6A77004455F6 /* AnimalViewController.swift in Sources */,
 				694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */,
