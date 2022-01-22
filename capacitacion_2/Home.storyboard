@@ -56,9 +56,21 @@
                                     <constraint firstAttribute="height" constant="110" id="Mmc-96-2yt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Ir a tableView"/>
+                                <state key="normal" title="Ir a Mi carrito"/>
                                 <connections>
                                     <action selector="didTapTableViewButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NS5-8g-XtQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rP-YM-YE8">
+                                <rect key="frame" x="20" y="487" width="374" height="110"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="gqa-EZ-a1y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a CollectionView"/>
+                                <connections>
+                                    <action selector="didTapCollectionViewButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ixR-JH-HnX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,8 +87,11 @@
                             <constraint firstItem="Q9Y-w7-4AT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="POW-EG-bVo"/>
                             <constraint firstItem="6kx-LE-EPP" firstAttribute="top" secondItem="LL7-Eh-2Q5" secondAttribute="bottom" constant="8" symbolic="YES" id="SC5-sf-mrs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Q9Y-w7-4AT" secondAttribute="trailing" constant="20" id="Zmu-S9-Mnv"/>
+                            <constraint firstItem="4rP-YM-YE8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="c5q-Ig-maH"/>
+                            <constraint firstItem="Q9Y-w7-4AT" firstAttribute="top" secondItem="4rP-YM-YE8" secondAttribute="bottom" constant="16" id="fB7-yA-0JI"/>
                             <constraint firstItem="LL7-Eh-2Q5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vRh-Xh-81o"/>
                             <constraint firstItem="4pL-pM-stC" firstAttribute="leading" secondItem="6kx-LE-EPP" secondAttribute="trailing" constant="8" symbolic="YES" id="vpg-dP-bSH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4rP-YM-YE8" secondAttribute="trailing" constant="20" id="we3-JY-poC"/>
                             <constraint firstItem="rK0-XN-AfG" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-8" id="zFm-5W-zY3"/>
                         </constraints>
                     </view>
