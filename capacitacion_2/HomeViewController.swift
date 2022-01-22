@@ -13,26 +13,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoriesButton: UIButton!
     
     @IBAction func didTapCategoriesButton(_ sender: Any) {
-        // Forma de mostrar un controlador usando storyboards
-        guard let viewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CategoriesViewController") as? CategoriesViewController else {
-            print("ViewController not found")
+        guard let viewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "AnimalViewController") as? AnimalViewController else {
+            print("Error")
             return
         }
-
+        
+        viewController.delegate = self
         navigationController?.pushViewController(viewController, animated: true)
         
-        // Forma de mostrar un controlador usando xibs, descomentar para mostrar la pantalla con xib
-//        let ajustesViewController = AjustesViewController()
-//        navigationController?.pushViewController(ajustesViewController, animated: true)
     }
     
     @IBAction func didTapTableViewButton(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TableViewController") as? TableViewController else {
-            print("ViewController not found")
+        guard let viewController = UIStoryboard(name: "ShoppingCart", bundle: nil).instantiateViewController(identifier: "ShoppingCartViewController") as? ShoppingCartViewController else {
+            print("Error")
             return
         }
-
+        // Opcion para ocultar el tabBar
+        viewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     override func viewDidLoad() {
@@ -40,10 +39,12 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         // Variable para poner el titulo a la pantalla
         self.title = "Inicio"
-        productImage.image = UIImage.HomeImages.productImage
-    
     }
+}
 
-
+extension HomeViewController: AnimalDelegate {
+    func addAnimal(name: String) {
+        print(name)
+    }
 }
 

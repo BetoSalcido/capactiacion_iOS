@@ -1,24 +1,20 @@
 //
-//  LoginViewController.swift
+//  CollectionViewController.swift
 //  capacitacion_2
 //
-//  Created by Beto Salcido on 15/01/22.
+//  Created by Beto Salcido on 22/01/22.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class CollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .blue
         // Do any additional setup after loading the view.
     }
     
-    func inicioSession() {
-        sceneDelegate.switchViewController()
-    }
 
     /*
     // MARK: - Navigation

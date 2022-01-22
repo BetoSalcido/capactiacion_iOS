@@ -3,10 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2ED1C525C1FF3097DA459030 /* Pods_capacitacion_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D6D06F3B87137E7E92B9D1 /* Pods_capacitacion_2.framework */; };
+		694B545A279C751C00CF5ABF /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694B5459279C751C00CF5ABF /* ShoppingCart.storyboard */; };
+		694B545C279C753C00CF5ABF /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B545B279C753C00CF5ABF /* ShoppingCartViewController.swift */; };
+		694B5460279C7BE200CF5ABF /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B545F279C7BE200CF5ABF /* UIView+App.swift */; };
+		694B5463279C8EAA00CF5ABF /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B5462279C8EAA00CF5ABF /* ShoppingCartCell.swift */; };
+		694B5465279C90BB00CF5ABF /* ShoppingCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B5464279C90BB00CF5ABF /* ShoppingCartModel.swift */; };
+		694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */; };
+		694B546B279C9D1B00CF5ABF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */; };
+		694B546D279C9D4400CF5ABF /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694B546C279C9D4400CF5ABF /* CollectionView.storyboard */; };
+		69556410279C6A77004455F6 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6955640F279C6A77004455F6 /* AnimalViewController.swift */; };
 		69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBC279331A10078A52D /* AppDelegate.swift */; };
 		69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBE279331A10078A52D /* SceneDelegate.swift */; };
 		69BB7FC1279331A10078A52D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FC0279331A10078A52D /* HomeViewController.swift */; };
@@ -14,19 +24,21 @@
 		69BB7FC9279331A20078A52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FC7279331A20078A52D /* LaunchScreen.storyboard */; };
 		69BB7FD12793325D0078A52D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD02793325D0078A52D /* TabBarController.swift */; };
 		69BB7FD3279332AF0078A52D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FD2279332AF0078A52D /* Home.storyboard */; };
-		69BB7FD527933C070078A52D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD427933C070078A52D /* LoginViewController.swift */; };
 		69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FD627933D4B0078A52D /* UIViewController+App.swift */; };
-		69BB7FDB27933F0C0078A52D /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDA27933F0C0078A52D /* Example.swift */; };
-		69BB7FDD27933FA10078A52D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */; };
-		69BB7FE0279345D70078A52D /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FDE279345D70078A52D /* AjustesViewController.swift */; };
-		69BB7FE1279345D70078A52D /* AjustesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BB7FDF279345D70078A52D /* AjustesViewController.xib */; };
-		69BB7FE427934F660078A52D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE327934F660078A52D /* SplashViewController.swift */; };
-		69BB7FE62793591A0078A52D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE52793591A0078A52D /* TableViewController.swift */; };
-		69BB7FE927935CCE0078A52D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FE827935CCE0078A52D /* MainCell.swift */; };
-		69BB7FEB279369570078A52D /* UIImage+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FEA279369570078A52D /* UIImage+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281CEF9C6EA7350E8D0AFF02 /* Pods-capacitacion_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capacitacion_2.release.xcconfig"; path = "Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2.release.xcconfig"; sourceTree = "<group>"; };
+		40D6D06F3B87137E7E92B9D1 /* Pods_capacitacion_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_capacitacion_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		694B5459279C751C00CF5ABF /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		694B545B279C753C00CF5ABF /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		694B545F279C7BE200CF5ABF /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
+		694B5462279C8EAA00CF5ABF /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
+		694B5464279C90BB00CF5ABF /* ShoppingCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartModel.swift; sourceTree = "<group>"; };
+		694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+App.swift"; sourceTree = "<group>"; };
+		694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		694B546C279C9D4400CF5ABF /* CollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionView.storyboard; sourceTree = "<group>"; };
+		6955640F279C6A77004455F6 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		69BB7FB9279331A10078A52D /* capacitacion_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capacitacion_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB7FBC279331A10078A52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BB7FBE279331A10078A52D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,16 +48,8 @@
 		69BB7FCA279331A20078A52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BB7FD02793325D0078A52D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		69BB7FD2279332AF0078A52D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		69BB7FD427933C070078A52D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69BB7FD627933D4B0078A52D /* UIViewController+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
-		69BB7FDA27933F0C0078A52D /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
-		69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		69BB7FDE279345D70078A52D /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
-		69BB7FDF279345D70078A52D /* AjustesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AjustesViewController.xib; sourceTree = "<group>"; };
-		69BB7FE327934F660078A52D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		69BB7FE52793591A0078A52D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		69BB7FE827935CCE0078A52D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
-		69BB7FEA279369570078A52D /* UIImage+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
+		8094FEB37DDEA61859B32712 /* Pods-capacitacion_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capacitacion_2.debug.xcconfig"; path = "Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +57,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED1C525C1FF3097DA459030 /* Pods_capacitacion_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		694B5458279C74EC00CF5ABF /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				694B5461279C8E9500CF5ABF /* Cell */,
+				694B5459279C751C00CF5ABF /* ShoppingCart.storyboard */,
+				694B545B279C753C00CF5ABF /* ShoppingCartViewController.swift */,
+				694B5464279C90BB00CF5ABF /* ShoppingCartModel.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		694B5461279C8E9500CF5ABF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				694B5462279C8EAA00CF5ABF /* ShoppingCartCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		694B5469279C9D0200CF5ABF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				694B546A279C9D1B00CF5ABF /* CollectionViewController.swift */,
+				694B546C279C9D4400CF5ABF /* CollectionView.storyboard */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		69BB7FB0279331A10078A52D = {
 			isa = PBXGroup;
 			children = (
 				69BB7FBB279331A10078A52D /* capacitacion_2 */,
 				69BB7FBA279331A10078A52D /* Products */,
+				FB9AF5C43897B95F703B4E55 /* Pods */,
+				AB08D0CCC24CFB7E54ED9785 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +113,8 @@
 		69BB7FBB279331A10078A52D /* capacitacion_2 */ = {
 			isa = PBXGroup;
 			children = (
-				69BB7FE727935C9A0078A52D /* TableViewCells */,
+				694B5469279C9D0200CF5ABF /* CollectionView */,
+				694B5458279C74EC00CF5ABF /* ShoppingCart */,
 				69BB7FD827933D500078A52D /* Extension */,
 				69BB7FBC279331A10078A52D /* AppDelegate.swift */,
 				69BB7FBE279331A10078A52D /* SceneDelegate.swift */,
@@ -88,13 +124,7 @@
 				69BB7FC7279331A20078A52D /* LaunchScreen.storyboard */,
 				69BB7FCA279331A20078A52D /* Info.plist */,
 				69BB7FD02793325D0078A52D /* TabBarController.swift */,
-				69BB7FD427933C070078A52D /* LoginViewController.swift */,
-				69BB7FDA27933F0C0078A52D /* Example.swift */,
-				69BB7FDC27933FA10078A52D /* CategoriesViewController.swift */,
-				69BB7FDE279345D70078A52D /* AjustesViewController.swift */,
-				69BB7FDF279345D70078A52D /* AjustesViewController.xib */,
-				69BB7FE327934F660078A52D /* SplashViewController.swift */,
-				69BB7FE52793591A0078A52D /* TableViewController.swift */,
+				6955640F279C6A77004455F6 /* AnimalViewController.swift */,
 			);
 			path = capacitacion_2;
 			sourceTree = "<group>";
@@ -103,17 +133,27 @@
 			isa = PBXGroup;
 			children = (
 				69BB7FD627933D4B0078A52D /* UIViewController+App.swift */,
-				69BB7FEA279369570078A52D /* UIImage+App.swift */,
+				694B545F279C7BE200CF5ABF /* UIView+App.swift */,
+				694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		69BB7FE727935C9A0078A52D /* TableViewCells */ = {
+		AB08D0CCC24CFB7E54ED9785 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69BB7FE827935CCE0078A52D /* MainCell.swift */,
+				40D6D06F3B87137E7E92B9D1 /* Pods_capacitacion_2.framework */,
 			);
-			path = TableViewCells;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB9AF5C43897B95F703B4E55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8094FEB37DDEA61859B32712 /* Pods-capacitacion_2.debug.xcconfig */,
+				281CEF9C6EA7350E8D0AFF02 /* Pods-capacitacion_2.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BB7FCD279331A20078A52D /* Build configuration list for PBXNativeTarget "capacitacion_2" */;
 			buildPhases = (
+				800C3C6600897E739600C280 /* [CP] Check Pods Manifest.lock */,
 				69BB7FB5279331A10078A52D /* Sources */,
 				69BB7FB6279331A10078A52D /* Frameworks */,
 				69BB7FB7279331A10078A52D /* Resources */,
+				64A10413F792DF2DE2883E39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,8 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BB7FE1279345D70078A52D /* AjustesViewController.xib in Resources */,
+				694B545A279C751C00CF5ABF /* ShoppingCart.storyboard in Resources */,
 				69BB7FD3279332AF0078A52D /* Home.storyboard in Resources */,
+				694B546D279C9D4400CF5ABF /* CollectionView.storyboard in Resources */,
 				69BB7FC9279331A20078A52D /* LaunchScreen.storyboard in Resources */,
 				69BB7FC6279331A20078A52D /* Assets.xcassets in Resources */,
 			);
@@ -182,24 +225,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64A10413F792DF2DE2883E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		800C3C6600897E739600C280 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-capacitacion_2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69BB7FB5279331A10078A52D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				694B546B279C9D1B00CF5ABF /* CollectionViewController.swift in Sources */,
+				694B5460279C7BE200CF5ABF /* UIView+App.swift in Sources */,
+				694B5463279C8EAA00CF5ABF /* ShoppingCartCell.swift in Sources */,
 				69BB7FC1279331A10078A52D /* HomeViewController.swift in Sources */,
-				69BB7FE0279345D70078A52D /* AjustesViewController.swift in Sources */,
-				69BB7FE927935CCE0078A52D /* MainCell.swift in Sources */,
-				69BB7FEB279369570078A52D /* UIImage+App.swift in Sources */,
-				69BB7FDB27933F0C0078A52D /* Example.swift in Sources */,
+				694B545C279C753C00CF5ABF /* ShoppingCartViewController.swift in Sources */,
 				69BB7FD12793325D0078A52D /* TabBarController.swift in Sources */,
+				694B5465279C90BB00CF5ABF /* ShoppingCartModel.swift in Sources */,
 				69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */,
 				69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */,
-				69BB7FE62793591A0078A52D /* TableViewController.swift in Sources */,
-				69BB7FD527933C070078A52D /* LoginViewController.swift in Sources */,
-				69BB7FDD27933FA10078A52D /* CategoriesViewController.swift in Sources */,
+				69556410279C6A77004455F6 /* AnimalViewController.swift in Sources */,
+				694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */,
 				69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */,
-				69BB7FE427934F660078A52D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +419,7 @@
 		};
 		69BB7FCE279331A20078A52D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8094FEB37DDEA61859B32712 /* Pods-capacitacion_2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +438,7 @@
 		};
 		69BB7FCF279331A20078A52D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 281CEF9C6EA7350E8D0AFF02 /* Pods-capacitacion_2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
