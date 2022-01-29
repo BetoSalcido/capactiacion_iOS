@@ -6,5 +6,6 @@ target 'capacitacion_2' do
   use_frameworks!
 
   # Pods for capacitacion_2
+  pod 'Kingfisher', '~> 5.0'
 
 end
