@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59A82481B0385D55EDAAA805 /* Pods_capacitacion_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50BA4CD55A0007F540DCFA4 /* Pods_capacitacion_2.framework */; };
 		69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBC279331A10078A52D /* AppDelegate.swift */; };
 		69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBE279331A10078A52D /* SceneDelegate.swift */; };
 		69BB7FC1279331A10078A52D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FC0279331A10078A52D /* HomeViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57AD9CAA4F16BA7F18BF0161 /* Pods-capacitacion_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capacitacion_2.release.xcconfig"; path = "Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2.release.xcconfig"; sourceTree = "<group>"; };
 		69BB7FB9279331A10078A52D /* capacitacion_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capacitacion_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB7FBC279331A10078A52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BB7FBE279331A10078A52D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		69BB7FE52793591A0078A52D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		69BB7FE827935CCE0078A52D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		69BB7FEA279369570078A52D /* UIImage+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
+		B50BA4CD55A0007F540DCFA4 /* Pods_capacitacion_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_capacitacion_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27F493E43CF0ED01C7AB21E /* Pods-capacitacion_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capacitacion_2.debug.xcconfig"; path = "Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A82481B0385D55EDAAA805 /* Pods_capacitacion_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				69BB7FBB279331A10078A52D /* capacitacion_2 */,
 				69BB7FBA279331A10078A52D /* Products */,
+				B038A4357C510AF319323431 /* Pods */,
+				CCCFD245A2521A9766CE5C81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +123,24 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		B038A4357C510AF319323431 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F27F493E43CF0ED01C7AB21E /* Pods-capacitacion_2.debug.xcconfig */,
+				57AD9CAA4F16BA7F18BF0161 /* Pods-capacitacion_2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCCFD245A2521A9766CE5C81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B50BA4CD55A0007F540DCFA4 /* Pods_capacitacion_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +148,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BB7FCD279331A20078A52D /* Build configuration list for PBXNativeTarget "capacitacion_2" */;
 			buildPhases = (
+				FAA6AFAD15EA5D245C4331F6 /* [CP] Check Pods Manifest.lock */,
 				69BB7FB5279331A10078A52D /* Sources */,
 				69BB7FB6279331A10078A52D /* Frameworks */,
 				69BB7FB7279331A10078A52D /* Resources */,
@@ -181,6 +207,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAA6AFAD15EA5D245C4331F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-capacitacion_2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69BB7FB5279331A10078A52D /* Sources */ = {
@@ -335,6 +386,7 @@
 		};
 		69BB7FCE279331A20078A52D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27F493E43CF0ED01C7AB21E /* Pods-capacitacion_2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +405,7 @@
 		};
 		69BB7FCF279331A20078A52D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57AD9CAA4F16BA7F18BF0161 /* Pods-capacitacion_2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
