@@ -23,6 +23,11 @@ class HomeViewController: UIViewController {
 
 // MARK: - Actions
 extension HomeViewController {
+    @IBAction func didTapURLSessionButton(_ sender: Any) {
+        let viewController = URLSessionViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     @IBAction func didTapCollectionViewButton(_ sender: Any) {
         guard let viewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(identifier: "CollectionViewController") as? CollectionViewController else {
             print("Error")
@@ -37,7 +42,7 @@ extension HomeViewController {
             print("Error")
             return
         }
-        
+        /// Forma de instanciar un delegado de la clase padre.
         viewController.delegate = self
         navigationController?.pushViewController(viewController, animated: true)
         
@@ -54,11 +59,27 @@ extension HomeViewController {
         
     }
     
+    @IBAction func didTapTextFieldButton(_ sender: Any) {
+        guard let viewController = UIStoryboard(name: "TextField", bundle: nil).instantiateViewController(identifier: "TextFieldViewController") as? TextFieldViewController else {
+            print("Error")
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+    
 }
 
+// MARK: - AnimalDelegate
 extension HomeViewController: AnimalDelegate {
+    func removeAnimal(name: String) {
+        
+    }
+    
     func addAnimal(name: String) {
         print(name)
     }
 }
+
+
 

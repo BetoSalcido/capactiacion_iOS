@@ -24,10 +24,14 @@ private extension TabBarController {
     
     func setUpViewController() {
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let collectionViewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
+        let urlSessionViewController = URLSessionViewController()
         
         // Es una variable del TabBarController
         viewControllers = [
             createTabController(for: homeViewController, title: "Inicio", selected: UIImage(named: "icon_ic_kelder")!),
+            createTabController(for: urlSessionViewController, title: "URLSession", selected: UIImage(named: "icon_ic_kelder")!),
+            createTabController(for: collectionViewController, title: "CollectionView", selected: UIImage(named: "icon_ic_kelder")!),
         ]
     }
     
