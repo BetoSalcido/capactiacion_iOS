@@ -25,23 +25,3 @@ extension String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
-
-
-//func textFieldDidChangeSelection(_ textField: UITextField) {
-//    if textField == emailTextField {
-//        if let text = textField.text, text.isValidEmail() {
-//            userEmail = text.trim()
-//            saveButton.isEnabled = true
-//        } else {
-//            saveButton.isEnabled = false
-//        }
-//     }
-//}
-//
-//func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//
-//    if textField.text?.last == " "  && string == " " {
-//        return false
-//    }
-//    return true
-//}
