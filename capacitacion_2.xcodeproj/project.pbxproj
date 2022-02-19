@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2ED1C525C1FF3097DA459030 /* Pods_capacitacion_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D6D06F3B87137E7E92B9D1 /* Pods_capacitacion_2.framework */; };
+		691738AA27C15BF200DFDB7E /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691738A927C15BF200DFDB7E /* UITextField+App.swift */; };
 		691CC02127AF0A1100D83EF9 /* MacStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691CC01B27AF0A1100D83EF9 /* MacStoreViewController.swift */; };
 		691CC02227AF0A1100D83EF9 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691CC01C27AF0A1100D83EF9 /* CollectionView.storyboard */; };
 		691CC02327AF0A1100D83EF9 /* MacStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691CC01E27AF0A1100D83EF9 /* MacStoreCell.swift */; };
@@ -22,7 +23,6 @@
 		694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */; };
 		697A04E327C1481E00DCE8E1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697A04E227C1481E00DCE8E1 /* Login.storyboard */; };
 		697A04E527C1482C00DCE8E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A04E427C1482C00DCE8E1 /* LoginViewController.swift */; };
-		697A04E827C14B3D00DCE8E1 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A04E727C14B3D00DCE8E1 /* UITextField+App.swift */; };
 		697A04EA27C14C7500DCE8E1 /* String+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A04E927C14C7500DCE8E1 /* String+App.swift */; };
 		697A04EE27C14D0B00DCE8E1 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A04ED27C14D0B00DCE8E1 /* AlertManager.swift */; };
 		69A6918627AF08A10042E4DB /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A6918527AF08A10042E4DB /* ProductModel.swift */; };
@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		281CEF9C6EA7350E8D0AFF02 /* Pods-capacitacion_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capacitacion_2.release.xcconfig"; path = "Target Support Files/Pods-capacitacion_2/Pods-capacitacion_2.release.xcconfig"; sourceTree = "<group>"; };
 		40D6D06F3B87137E7E92B9D1 /* Pods_capacitacion_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_capacitacion_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		691738A927C15BF200DFDB7E /* UITextField+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
 		691CC01B27AF0A1100D83EF9 /* MacStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacStoreViewController.swift; sourceTree = "<group>"; };
 		691CC01C27AF0A1100D83EF9 /* CollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionView.storyboard; sourceTree = "<group>"; };
 		691CC01E27AF0A1100D83EF9 /* MacStoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacStoreCell.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+App.swift"; sourceTree = "<group>"; };
 		697A04E227C1481E00DCE8E1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		697A04E427C1482C00DCE8E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		697A04E727C14B3D00DCE8E1 /* UITextField+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITextField+App.swift"; path = "../../../../../../Applications/UITextField+App.swift"; sourceTree = "<group>"; };
 		697A04E927C14C7500DCE8E1 /* String+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+App.swift"; sourceTree = "<group>"; };
 		697A04ED27C14D0B00DCE8E1 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		69A6918527AF08A10042E4DB /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
@@ -216,8 +216,8 @@
 				69BB7FD627933D4B0078A52D /* UIViewController+App.swift */,
 				694B545F279C7BE200CF5ABF /* UIView+App.swift */,
 				694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */,
-				697A04E727C14B3D00DCE8E1 /* UITextField+App.swift */,
 				697A04E927C14C7500DCE8E1 /* String+App.swift */,
+				691738A927C15BF200DFDB7E /* UITextField+App.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -371,11 +371,11 @@
 				697A04EE27C14D0B00DCE8E1 /* AlertManager.swift in Sources */,
 				69BB7FD727933D4B0078A52D /* UIViewController+App.swift in Sources */,
 				69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */,
-				697A04E827C14B3D00DCE8E1 /* UITextField+App.swift in Sources */,
 				697A04E527C1482C00DCE8E1 /* LoginViewController.swift in Sources */,
 				694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */,
 				69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */,
 				69A6918627AF08A10042E4DB /* ProductModel.swift in Sources */,
+				691738AA27C15BF200DFDB7E /* UITextField+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
