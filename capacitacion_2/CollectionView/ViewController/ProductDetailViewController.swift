@@ -2,7 +2,7 @@
 //  ProductDetailViewController.swift
 //  capacitacion_2
 //
-//  Created by Beto Salcido on 05/02/22.
+//  Created by Beto Salcido on 05/2/22.
 //
 
 import UIKit

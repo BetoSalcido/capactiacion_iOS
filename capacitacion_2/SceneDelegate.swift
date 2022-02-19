@@ -20,11 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            tabBarController.selectedIndex = 0
-            window.rootViewController = tabBarController
-            self.window = window
-            self.window?.makeKeyAndVisible()
+            window = UIWindow(windowScene: windowScene)
+            switchRooter()
         }
     }
 
@@ -55,7 +52,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
+
+// MARK: - Public Methods
+extension SceneDelegate {
+    func switchRooter() {
+        if UserDefaults.standard.bool(forKey: "isLogged") {
+            tabBarController.selectedIndex = 0
+            window?.rootViewController = tabBarController
+            self.window?.makeKeyAndVisible()
+        } else {
+            guard let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {
+                return
+            }
+            window?.rootViewController = loginViewController
+            self.window?.makeKeyAndVisible()
+        }
+    }
+}
+
+
+
 

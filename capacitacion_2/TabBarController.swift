@@ -24,14 +24,14 @@ private extension TabBarController {
     
     func setUpViewController() {
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let collectionViewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
-        let urlSessionViewController = URLSessionViewController()
+        let macStoreViewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(withIdentifier: "MacStoreViewController") as! MacStoreViewController
+        let shoppingCartViewController = UIStoryboard(name: "ShoppingCart", bundle: nil).instantiateViewController(withIdentifier: "ShoppingCartViewController") as! ShoppingCartViewController
         
         // Es una variable del TabBarController
         viewControllers = [
             createTabController(for: homeViewController, title: "Inicio", selected: UIImage(named: "icon_ic_kelder")!),
-            createTabController(for: urlSessionViewController, title: "URLSession", selected: UIImage(named: "icon_ic_kelder")!),
-            createTabController(for: collectionViewController, title: "CollectionView", selected: UIImage(named: "icon_ic_kelder")!),
+            createTabController(for: macStoreViewController, title: "MacStore", selected: UIImage(named: "iconShop")!),
+            createTabController(for: shoppingCartViewController, title: "ShoppingCart", selected: UIImage(named: "iconCart")!),
         ]
     }
     
