@@ -17,8 +17,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        UserDefaults.standard.set(true, forKey: "isLogged")
-        sceneDelegate.switchRooter()
+
     }
 
 }
