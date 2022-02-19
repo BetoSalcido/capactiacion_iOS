@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum Response<T> {
     case success(T)
     case failure(Error)

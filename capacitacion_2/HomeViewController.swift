@@ -29,7 +29,7 @@ extension HomeViewController {
     }
     
     @IBAction func didTapCollectionViewButton(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(identifier: "CollectionViewController") as? CollectionViewController else {
+        guard let viewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(identifier: "MacStoreViewController") as? MacStoreViewController else {
             print("Error")
             return
         }
