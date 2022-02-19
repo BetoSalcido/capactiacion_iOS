@@ -5,7 +5,7 @@
 //  Created by Beto Salcido on 19/02/22.
 //
 
-import Foundation
+import UIKit
 
 extension UITextField {
     enum Position {
