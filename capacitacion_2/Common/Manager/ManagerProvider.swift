@@ -13,6 +13,7 @@ protocol ManagerProvider {
     /// Manages APIs.
     var netWorkingManager: NetWorkingManager { get }
     
+    var alertManager: AlertManager { get }
 }
 
 class AppManagerProvider: ManagerProvider {
