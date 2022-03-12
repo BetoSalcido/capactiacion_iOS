@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isLogged")
             sceneDelegate.switchRooter()
         } else {
-            AlertManager.showSimpleAlertView(on: self, with: "Lo Sentimos", message: "Los datos no son correctos", handlerAction: nil)
+            //AlertManager.showSimpleAlertView(on: self, with: "Lo Sentimos", message: "Los datos no son correctos", handlerAction: nil)
         }
     }
 }
@@ -72,7 +72,6 @@ extension LoginViewController: UITextFieldDelegate {
         } else {
             passwordTextField.layer.borderColor = UIColor.orange.cgColor
         }
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

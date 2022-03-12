@@ -9,9 +9,11 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    let tabBarController = TabBarController()
+    private lazy var managerProvider: AppManagerProvider = {
+        return AppManagerProvider()
+    }()
+    
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -58,7 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     func switchRooter() {
         if UserDefaults.standard.bool(forKey: "isLogged") {
-            tabBarController.selectedIndex = 0
+            let tabBarController = TabBarController(managerProvider: managerProvider)
             window?.rootViewController = tabBarController
             self.window?.makeKeyAndVisible()
         } else {

@@ -10,8 +10,21 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    private let managerProvider: AppManagerProvider
+    
+    init(managerProvider: AppManagerProvider) {
+        self.managerProvider = managerProvider
+
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedIndex = 0
         tabBar.isTranslucent = false
         self.delegate = self
 
@@ -42,6 +55,10 @@ private extension TabBarController {
         navController.tabBarItem.title = title
         navController.navigationBar.barStyle = .default
         return navController
+    }
+    
+    func makeHomeScreen() -> UIViewController {
+        return UIViewController()
     }
 }
 
