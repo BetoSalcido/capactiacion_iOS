@@ -30,4 +30,13 @@ struct Login: Codable {
         case lastOrderID = "lastOrderId"
         case token, calzzapatoUserId
     }
+    
+    struct Request: Codable {
+        let email: String
+        let password: String
+        let withFacebook: Bool
+        let facebookId: String
+        let accessToken: String
+    }
 }
+
