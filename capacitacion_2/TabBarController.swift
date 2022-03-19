@@ -24,8 +24,16 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = 0
-        tabBar.isTranslucent = false
+        tabBar.isTranslucent = false 
         self.delegate = self
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            self.tabBar.standardAppearance = appearance
+            self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+        }
 
         setUpViewController()
     }
@@ -37,13 +45,12 @@ private extension TabBarController {
     func setUpViewController() {
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         let macStoreViewController = UIStoryboard(name: "CollectionView", bundle: nil).instantiateViewController(withIdentifier: "MacStoreViewController") as! MacStoreViewController
-        let shoppingCartViewController = UIStoryboard(name: "ShoppingCart", bundle: nil).instantiateViewController(withIdentifier: "ShoppingCartViewController") as! ShoppingCartViewController
         
         // Es una variable del TabBarController
         viewControllers = [
             createTabController(for: homeViewController, title: "Inicio", selected: UIImage(named: "icon_ic_kelder")!),
             createTabController(for: macStoreViewController, title: "MacStore", selected: UIImage(named: "iconShop")!),
-            createTabController(for: shoppingCartViewController, title: "ShoppingCart", selected: UIImage(named: "iconCart")!),
+            createTabController(for: makeShoppingCartScreen(), title: "ShoppingCart", selected: UIImage(named: "iconCart")!),
         ]
     }
     
@@ -58,6 +65,14 @@ private extension TabBarController {
     
     func makeHomeScreen() -> UIViewController {
         return UIViewController()
+    }
+    
+    func makeShoppingCartScreen() -> UIViewController {
+        let viewModel = ShoppingCartViewModel(netWorkingManager: managerProvider.netWorkingManager,
+                                              alertManager: managerProvider.alertManager)
+        let viewController = ShoppingCartViewController.instantiate()
+        viewController.viewModel = viewModel
+        return viewController
     }
 }
 

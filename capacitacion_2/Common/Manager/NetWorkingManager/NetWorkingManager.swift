@@ -90,6 +90,23 @@ private extension NetWorkingManager {
         request.httpMethod = httpMethod.rawValue
         request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.addValue("identity", forHTTPHeaderField: "Accept-Encoding")
+        request.addValue("3", forHTTPHeaderField: "device")
+        request.addValue("1.0", forHTTPHeaderField: "versioncode")
+        
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            request.addValue(token, forHTTPHeaderField: "Authorization")
+        }
+        
+        request.addValue("2b0c178e-516b-4673-b5be-46a298a159d1", forHTTPHeaderField: "uuid")
+        
+        let data: [String:Any] = [
+            "instance": "2b0c178e-516b-4673-b5be-46a298a159d1",
+            "ip": "",
+            "uuid": "",
+        ]
+
+        let jsonStringgify = stringify(json: data)
+        request.addValue(jsonStringgify, forHTTPHeaderField: "metadata")
         
         if httpMethod != .GET {
             do {
@@ -100,6 +117,24 @@ private extension NetWorkingManager {
         }
         
         return request
+    }
+    
+    func stringify(json: Any, prettyPrinted: Bool = false) -> String {
+        var options: JSONSerialization.WritingOptions = []
+        if prettyPrinted {
+          options = JSONSerialization.WritingOptions.prettyPrinted
+        }
+
+        do {
+          let data = try JSONSerialization.data(withJSONObject: json, options: options)
+          if let string = String(data: data, encoding: String.Encoding.utf8) {
+            return string.replacingOccurrences(of: "\\" , with: "")
+          }
+        } catch {
+          print(error)
+        }
+
+        return ""
     }
 }
 

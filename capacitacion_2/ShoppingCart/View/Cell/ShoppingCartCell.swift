@@ -25,35 +25,51 @@ class ShoppingCartCell: UITableViewCell {
     @IBOutlet weak var addItemButton: UIButton!
     @IBOutlet weak var removeItemButton: UIButton!
     @IBOutlet weak var removeButton: UIButton!
+    
+    
     @IBAction func removeButtonTapped(_ sender: Any) {
         
     }
+    
+    private var observations: [NSKeyValueObservation] = []
+    private var viewModel: ShoppingCartCellViewModel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.applyShadow()
     }
-
-}
-
-// Public Methods
-extension ShoppingCartCell {
-    func configure(with data: ShoppingCart) {
-        productNameLabel.text = data.name
-        productCodeLabel.text = "Código: \(data.code)"
-        productSizeLabel.text = data.size
-        productFinalPriceLabel.text = "\(data.price)"
-        
-        //Forma de validar si una url funciona o es verdadera
-        if let url = URL(string: data.image) {
-            let resource = ImageResource(downloadURL: url)
+    
+    override func prepareForReuse() {
+        observations.removeAll()
+    }
+    
+    func loadImageU(with stringURL:String) {
+        if let url = URL(string: stringURL ) {
+            let resource = ImageResource(downloadURL: url, cacheKey: "\(stringURL)")
             productImage.kf.indicatorType = .activity
             productImage.kf.setImage(with: resource)
         }
-        
-        productDisccountStackView.isHidden = data.disccount == 0
     }
-    
+}
+
+// MARK: - CellViewModelConfigurable
+extension ShoppingCartCell: CellViewModelConfigurable {
+    func configure(cellViewModel: CellViewModel) {
+        guard let viewModel = cellViewModel as? ShoppingCartCellViewModel else {
+            return
+        }
+        
+        self.viewModel = viewModel
+        
+        observations = [
+            viewModel.bind(\.title, to: productNameLabel, at: \.text),
+            viewModel.observe(\.imageURL) { [weak self] in
+                guard let url = $0 else { return }
+                self?.loadImageU(with: url)
+            }
+        ]
+        
+    }
 }
 
 

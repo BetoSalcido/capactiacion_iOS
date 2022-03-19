@@ -98,6 +98,7 @@ extension LoginViewModel {
             case .success(let result):
                 if let response = result {
                     print(response)
+                    UserDefaults.standard.setValue(response.token ?? "", forKey: "token")
                     self.delegate?.viewModelDidLogInSuccessfully(self)
                 }
                 
