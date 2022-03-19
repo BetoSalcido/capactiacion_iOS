@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
     
     init(managerProvider: AppManagerProvider) {
         self.managerProvider = managerProvider
-
         super.init(nibName: nil, bundle: nil)
     }
     

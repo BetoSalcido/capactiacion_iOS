@@ -24,4 +24,6 @@ class AppManagerProvider: ManagerProvider {
     lazy var alertManager: AlertManager = {
         return AlertManager()
     }()
+    
+    
 }

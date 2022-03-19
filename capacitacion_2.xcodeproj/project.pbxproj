@@ -37,6 +37,8 @@
 		69944DB527DCF6F200F709D5 /* Encodable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944DB427DCF6F200F709D5 /* Encodable+App.swift */; };
 		69944DB827DCF72300F709D5 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944DB727DCF72300F709D5 /* LoginManager.swift */; };
 		69944DBC27DD073400F709D5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944DBB27DD073400F709D5 /* Login.swift */; };
+		69944DBF27DD14B600F709D5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944DBE27DD14B600F709D5 /* LoginViewModel.swift */; };
+		69944DC127DD1D1200F709D5 /* NSObjectProtocol+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69944DC027DD1D1200F709D5 /* NSObjectProtocol+App.swift */; };
 		69A6918627AF08A10042E4DB /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A6918527AF08A10042E4DB /* ProductModel.swift */; };
 		69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBC279331A10078A52D /* AppDelegate.swift */; };
 		69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB7FBE279331A10078A52D /* SceneDelegate.swift */; };
@@ -80,6 +82,8 @@
 		69944DB427DCF6F200F709D5 /* Encodable+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+App.swift"; sourceTree = "<group>"; };
 		69944DB727DCF72300F709D5 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		69944DBB27DD073400F709D5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		69944DBE27DD14B600F709D5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		69944DC027DD1D1200F709D5 /* NSObjectProtocol+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+App.swift"; sourceTree = "<group>"; };
 		69A6918527AF08A10042E4DB /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		69BB7FB9279331A10078A52D /* capacitacion_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capacitacion_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB7FBC279331A10078A52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				69944DB927DD071D00F709D5 /* Model */,
 				69944DBA27DD072300F709D5 /* View */,
+				69944DBD27DD148800F709D5 /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -256,6 +261,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		69944DBD27DD148800F709D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69944DBE27DD14B600F709D5 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		69A6918327AF087B0042E4DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +317,7 @@
 		69BB7FD827933D500078A52D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				69944DC027DD1D1200F709D5 /* NSObjectProtocol+App.swift */,
 				69BB7FD627933D4B0078A52D /* UIViewController+App.swift */,
 				694B545F279C7BE200CF5ABF /* UIView+App.swift */,
 				694B5466279C962F00CF5ABF /* UITableViewCell+App.swift */,
@@ -450,6 +464,7 @@
 			files = (
 				694B5460279C7BE200CF5ABF /* UIView+App.swift in Sources */,
 				69944DAA27DCF4A700F709D5 /* StoryboardInitializable.swift in Sources */,
+				69944DBF27DD14B600F709D5 /* LoginViewModel.swift in Sources */,
 				69944DA927DCF4A700F709D5 /* CellIdentifiable.swift in Sources */,
 				694B5463279C8EAA00CF5ABF /* ShoppingCartCell.swift in Sources */,
 				692D2E4727AF0FBB0090246A /* ProductDetailViewController.swift in Sources */,
@@ -474,6 +489,7 @@
 				69BB7FBD279331A10078A52D /* AppDelegate.swift in Sources */,
 				697A04E527C1482C00DCE8E1 /* LoginViewController.swift in Sources */,
 				69944DB827DCF72300F709D5 /* LoginManager.swift in Sources */,
+				69944DC127DD1D1200F709D5 /* NSObjectProtocol+App.swift in Sources */,
 				694B5467279C962F00CF5ABF /* UITableViewCell+App.swift in Sources */,
 				69944DB527DCF6F200F709D5 /* Encodable+App.swift in Sources */,
 				69BB7FBF279331A10078A52D /* SceneDelegate.swift in Sources */,

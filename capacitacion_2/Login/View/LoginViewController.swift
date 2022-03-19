@@ -13,15 +13,72 @@ class LoginViewController: UIViewController {
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     
-    private var email: String = ""
-    private var password: String = ""
+    private var observations: [NSKeyValueObservation] = []
     
-    private let emailSaved = "beto@welcometolevel.com"
-    private let passwordSaved = "12345"
+    var viewModel: LoginViewModel! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard viewModel != nil else {
+            assertionFailure("`viewModel` is required for \(Self.self) to work.")
+            return
+        }
+        
+        observations = [
+//            viewModel.bind(\.count, to: footerCountLabel, at: \.text),
+//            viewModel.bind(\.count, to: footerCountLabel, at: \.isHidden),
+            viewModel.bind(\.isSignInButtonEnabled, to: signInButton, at: \.isEnabled),
+            viewModel.observe(\.signTitle) { [signInButton] in
+                guard let title = $0  else { return }
+                signInButton?.setTitle(title, for: .normal)
+            },
+            viewModel.observe(\.isEmailTextFieldSelected) { [emailTextField] in
+                guard let color = $0 else { return }
+                emailTextField?.layer.borderColor = color.cgColor
+            },
+            viewModel.observe(\.isPasswordTextFieldSelected) { [passwordTextField] in
+                guard let color = $0 else { return }
+                passwordTextField?.layer.borderColor = color.cgColor
+            },
+            viewModel.observe(\.showLoadingView) { [weak self] in
+                if $0 {
+                    self?.showLoadingView(true)
+                } else {
+                    self?.removeLoadingView()
+                }
+            }
+        ]
+    
+        setUpView()
+        setUpTexFields()
+    }
+    
+    /// Método para cerrar el keyboard
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        viewModel.handleSignInButtonPressed()
+    }
+}
 
+// MARK: - Private Methods
+private extension LoginViewController {
+    func setUpView() {
+        signInButton.layer.cornerRadius = 5
+        
+        /// Forma de agregar un tap a toda la pantalla.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func setUpTexFields() {
         emailTextField.delegate = self
         emailTextField.tag = 100
         emailTextField.setIcon(with: UIImage(named: "iconEmail")!, position: .right)
@@ -34,63 +91,24 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 0.5
         passwordTextField.layer.cornerRadius = 5
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        
-        signInButton.layer.cornerRadius = 5
-        
-        /// Forma de agregar un tap a toda la pantalla.
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    /// Métofo para cerrar el keyboard
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    @IBAction func signInButtonPressed(_ sender: Any) {
-        if emailSaved == email && passwordSaved == password {
-            UserDefaults.standard.set(true, forKey: "isLogged")
-            sceneDelegate.switchRooter()
-        } else {
-            //AlertManager.showSimpleAlertView(on: self, with: "Lo Sentimos", message: "Los datos no son correctos", handlerAction: nil)
-        }
-    }
-}
-
-// MARK: - Private Methods
-private extension LoginViewController {
-    func validateForm() {
-        signInButton.isEnabled  = email.isValidEmail() && !password.isEmpty
     }
 }
 
 // MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if emailTextField == textField {
-            emailTextField.layer.borderColor = UIColor.orange.cgColor
-        } else {
-            passwordTextField.layer.borderColor = UIColor.orange.cgColor
-        }
+        viewModel.handleTextFieldDidBeginEditing(isEmailSelected: emailTextField == textField)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if emailTextField == textField {
-            emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        } else {
-            passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        }
+        viewModel.handleTextFieldDidEndEditing(isEmailSelected: emailTextField == textField)
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let text = textField.text {
-            if textField == emailTextField {
-                email = text
-            } else {
-                password = text
-            }
-            
-            validateForm()
+        if textField == emailTextField {
+            viewModel.handleEmailTextFieldDidChangeSelection(with: textField.text ?? "")
+        } else {
+            viewModel.handlePasswordTextFieldDidChangeSelection(with: textField.text ?? "")
         }
     }
     
@@ -101,4 +119,17 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+// MARK: - LoginViewModelDelegate
+extension LoginViewController: LoginViewModelDelegate {
+    func viewModelDidLogInSuccessfully(_ viewModel: LoginViewModel) {
+        UserDefaults.standard.set(true, forKey: "isLogged")
+        sceneDelegate.switchRooter()
+    }
+}
+
+// MARK: - StoryboardInitializable
+extension LoginViewController: StoryboardInitializable {
+    static var storyboardName = "Login"
 }

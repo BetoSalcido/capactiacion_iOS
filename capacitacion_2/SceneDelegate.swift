@@ -63,10 +63,12 @@ extension SceneDelegate {
             let tabBarController = TabBarController(managerProvider: managerProvider)
             window?.rootViewController = tabBarController
             self.window?.makeKeyAndVisible()
+            
         } else {
-            guard let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {
-                return
-            }
+            let loginViewModel = LoginViewModel(netWorkingManager: managerProvider.netWorkingManager,
+                                                alertManager: managerProvider.alertManager)
+            let loginViewController = LoginViewController.instantiate()
+            loginViewController.viewModel = loginViewModel
             window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
         }
